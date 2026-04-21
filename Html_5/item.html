@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BestMarket - Anunț</title>
+    <link rel="stylesheet" href="../CSS/item-page-styles.css">
+    <link rel="stylesheet" href="../CSS/general-page-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="../JS/table.js" defer></script>
+    <script src="../JS/gallery.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <input type="checkbox" id="menu-toggle" class="hidden-checkbox">
+
+        <label for="menu-toggle" class="header-menu-btn" title="Deschide Meniul">
+            <i class="fas fa-bars"></i>
+            Produse
+        </label>
+
+        <nav class="dropdown-menu">
+            <ul>
+                <li>
+                    <input type="checkbox" id="cat-electronice-toggle" class="hidden-checkbox">
+                    <label for="cat-electronice-toggle" class="menu-item">
+                        <i class="fas fa-laptop item-icon"></i> Electronice <i class="fas fa-chevron-down arrow"></i>
+                    </label>
+                    <ul class="submenu">
+                        <li><a href="item.html" class="submenu-option">Laptop-uri</a></li>
+                        <li><a href="#" class="submenu-option">Telefoane</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <input type="checkbox" id="cat-electro-toggle" class="hidden-checkbox">
+                    <label for="cat-electro-toggle" class="menu-item">
+                        <i class="fas fa-blender item-icon"></i> Electrocasnice <i
+                            class="fas fa-chevron-down arrow"></i>
+                    </label>
+                    <ul class="submenu">
+                        <li><a href="#" class="submenu-option">Mașini de spălat</a></li>
+                        <li><a href="#" class="submenu-option">Cuptoare</a></li>
+                    </ul>
+                </li>
+
+
+            </ul>
+        </nav>
+
+        <div class="logo-container">
+            <a href="../index.html">
+                <img src="../resources/logo.png" class="logo" alt="BestMarket Logo">
+            </a>
+        </div>
+
+        <div class="header-actions">
+            <a href="register.html" class="header-menu-btn"> <i class="fas fa-user-plus"></i> Înregistrare</a>
+            <a href="login.html" class="header-menu-btn "> <i class="fas fa-sign-in-alt"></i> Autentificare</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="item-container">
+
+            <article class="item-details">
+                <h2>Anunț</h2>
+                <!-- IMAGE SLIDER -->
+                <div class="product-gallery">
+                    <input type="radio" id="pic1" name="gallery-group" class="gallery-radio" checked>
+                    <input type="radio" id="pic2" name="gallery-group" class="gallery-radio">
+                    <input type="radio" id="pic3" name="gallery-group" class="gallery-radio">
+                    <input type="radio" id="pic4" name="gallery-group" class="gallery-radio">
+                    <input type="radio" id="pic5" name="gallery-group" class="gallery-radio">
+                    <input type="radio" id="pic6" name="gallery-group" class="gallery-radio">
+
+                    <div class="main-image-wrapper">
+                        <ol>
+                            <li><img src="../resources/Laptop1.jpg" class="main-image img1" alt="Laptop Poza 1"></li>
+                            <li><img src="../resources/Laptop2.jpg" class="main-image img2" alt="Laptop Poza 2"></li>
+                            <li><img src="../resources/Laptop3.jpg" class="main-image img3" alt="Laptop Poza 3"></li>
+                            <li><img src="../resources/Laptop6.jpg" class="main-image img4" alt="Laptop Poza 4"></li>
+                            <li><img src="../resources/Laptop7.jpg" class="main-image img5" alt="Laptop Poza 5"></li>
+                            <li><img src="../resources/Laptop8.jpg" class="main-image img6" alt="Laptop Poza 6"></li>
+                        </ol>
+                    </div>
+
+                    <div class="thumbnail-list">
+                        <label for="pic1" class="thumb-label thumb1">
+                            <img src="../resources/Laptop1.jpg" alt="Thumbnail 1">
+                        </label>
+                        <label for="pic2" class="thumb-label thumb2">
+                            <img src="../resources/Laptop2.jpg" alt="Thumbnail 2">
+                        </label>
+                        <label for="pic3" class="thumb-label thumb3">
+                            <img src="../resources/Laptop3.jpg" alt="Thumbnail 3">
+                        </label>
+                        <label for="pic4" class="thumb-label thumb4">
+                            <img src="../resources/Laptop6.jpg" alt="Thumbnail 4">
+                        </label>
+                        <label for="pic5" class="thumb-label thumb5">
+                            <img src="../resources/Laptop7.jpg" alt="Thumbnail 5">
+                        </label>
+                        <label for="pic6" class="thumb-label thumb6">
+                            <img src="../resources/Laptop8.jpg" alt="Thumbnail 6">
+                        </label>
+                    </div>
+                    <div class="gallery-control">
+                        <button class="play-pause"><i class="fas fa-play"></i> Play</button>
+                        <label for="repeat-gallery">Repetare:</label>
+                        <input type="checkbox" id="repeat-gallery" value="yes">
+                        <label for="timer-interval">Viteză:</label>
+                        <select id="timer-interval">
+                            <option value="500">0.5 secunde</option>
+                            <option value="2000">2 secunde</option>
+                            <option value="5000">5 secunde</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="item-price-info">
+                    <div class="price-huge">4.000 RON</div>
+                    <div class="condition-badge">Condiție: <strong>Ușor uzat</strong></div>
+                </div>
+
+                <details open>
+                    <summary>Apasă pentru a ascunde/afișa specificațiile tehnice</summary>
+
+
+                    <table class="specs-table">
+                        <tr>
+                            <th>Specificații</th>
+                            <th>Detalii</th>
+                        </tr>
+                        <tr>
+                            <td>Memorie</td>
+                            <td>16 GB RAM</td>
+                        </tr>
+                        <tr>
+                            <td>Stocare</td>
+                            <td>512 GB SSD</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">Ecran</td>
+                            <td>Rezolutie: 1920 x 1080 (Full HD)</td>
+                        </tr>
+                        <tr>
+                            <td>Dimensiune: 15.6 inch</td>
+                        </tr>
+                    </table>
+                </details>
+
+                <aside class="seller-card">
+                    <h2>Date vânzător</h2>
+                    <ul>
+                        <li><strong>Nume:</strong> Popescu Andrei</li>
+                        <li><strong>Rating:</strong> 4.9 / 5</li>
+                        <li><strong>Locație:</strong> Cluj, RO</li>
+                    </ul>
+                </aside>
+
+            </article>
+
+
+        </div>
+
+        <!-- TABEL PRODUSE ASEMANATOARE -->
+        <section class="comparison-section">
+            <h2>Anunțuri similare</h2>
+
+            <div class="table-responsive">
+                <table class="compare-table">
+                    <thead>
+                        <tr>
+                            <th>Imagine</th>
+                            <th>Nume Produs</th>
+                            <th>Stocare</th>
+                            <th>Preț</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="hover-trigger">
+                                <img src="../resources/Laptop4.jpg" alt="Laptop Pro" class="table-img">
+                                <div class="tooltip-info">Stare: Ușor uzat</div>
+                            </td>
+
+                            <td class="hover-trigger">
+                                <strong>Laptop Pro 15"</strong>
+                                <div class="tooltip-info">Foarte bun pentru muncă ușoară </div>
+                            </td>
+                            <td>1 TB SSD</td>
+                            <td class="hover-trigger">
+                                <p class="price">5.200 RON</p>
+                                <div class="tooltip-info">Prețul nu este negociabil </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="hover-trigger">
+                                <img src="../resources/Laptop5.jpg" alt="Laptop Gaming" class="table-img">
+                                <div class="tooltip-info">Stare: Ca nou </div>
+                            </td>
+                            <td class="hover-trigger">
+                                <strong>Laptop Gaming X</strong>
+                                <div class="tooltip-info">Ideal pentru jocuri și editare video </div>
+                            </td>
+                            <td>512 GB SSD</td>
+                            <td class="hover-trigger">
+                                <p class="price">4.000 RON</p>
+                                <div class="tooltip-info">Preț ușor negociabil </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="hover-trigger">
+                                <img src="../resources/Laptop5.jpg" alt="Laptop Gaming 1" class="table-img">
+                                <div class="tooltip-info">Stare: Nou nouț </div>
+                            </td>
+                            <td class="hover-trigger">
+                                <strong>Laptop Gaming Y</strong>
+                                <div class="tooltip-info">Ideal pentru jocuri și editare video </div>
+                            </td>
+                            <td>1.5 TB SSD</td>
+                            <td class="hover-trigger">
+                                <p class="price">5.800 RON</p>
+                                <div class="tooltip-info">Preț ușor negociabil </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Despre BestMarket</h3>
+                <p>Cea mai bună platformă pentru a vinde și cumpăra produse electronice și electrocasnice din România. A
+                    fost înființată de către Buda Sebastian în anul 2026. La momentul de față avem un numar mediu de 0
+                    utilizatori activi in fiecare zi!
+                </p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p><i class="fas fa-envelope"></i> suport@bestmarket.ro</p>
+                <p><i class="fas fa-phone"></i> 0123 456 789</p>
+                <p><i class="fas fa-map-marker-alt"></i> Cluj-Napoca, RO</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 BestMarket.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

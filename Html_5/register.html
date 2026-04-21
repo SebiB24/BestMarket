@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Înregistrare - BestMarket</title>
+    <link rel="stylesheet" href="../CSS/form_styles.css">
+    <script src="../JS/register.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Înregistrare utilizator</h1>
+        <nav>
+            <a href="login.html">Autentificare</a>
+        </nav>
+    </header>
+    <br>
+
+    <main>
+        <section>
+            <h2>Înregistrare</h2>
+            <form name="registerForm" action="login.html">
+                <fieldset>
+                    <legend><strong>Date personale și preferințe</strong></legend>
+                    <p>
+                        <label>Email:</label>
+                        <div class="validation-group">
+                            <input type="email" name="email" class="validation-email" required>
+                            <span class="dot"></span>
+                        </div>  
+                    </p>
+                    <p>
+                        <label>Parolă:</label>
+                        <div class="validation-group">
+                            <input type="password" name="password" class="validation-password" required>
+                            <span class="dot"></span>
+                        </div>
+                    </p>
+                    <p>
+                        <label>Nume utilizator:</label>
+                        <div class="validation-group">
+                            <input type="text" name="username" class="validation-text" maxlength="15" required>
+                            <span class="dot"></span>
+                        </div>
+                    </p>
+                    <p>
+                        <label>Cod personal:</label>
+                        <div class="validation-group">
+                            <input type="text" name="personcod" class="validation-text" maxlength="10">
+                            <span class="dot"></span>
+                        </div>
+                    </p>
+                    <p>
+                        <label>Număr de telefon:</label>
+                        <div class="validation-group">
+                            <input type="text" name="phone" class="validation-phone" maxlength="17">
+                            <span class="dot"></span>
+                        </div>
+                    </p>
+                    <p>
+                        <label>Gen:</label>
+                        <input type="radio" name="gender" value="male" checked> Masculin
+                        <input type="radio" name="gender" value="female"> Feminin
+                    </p>
+                    <p>
+                        <label>Data nașterii:</label>
+                        <div class="validation-group">
+                            <input type="text" name="birthdate" class="validation-birthday" placeholder="zz/ll/aaaa">
+                            <span class="dot"></span>
+                        </div>
+                    </p>
+                    <p>
+                        <label>Vârsta (max 100):</label>
+                        <input type="number" name="age" max="100" step="1" value="18">
+                    </p>
+
+                    <p>
+                        <label>Tip cont:</label>
+                        <select name="account_type">
+                            <option value="buyer">Persoană</option>
+                            <option value="seller">Grup</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label>Județ:</label>
+                        <select id="judet" name="judet">
+                            <option value="">Alege un județ</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label>Oraș:</label>
+                        <select id="oras" name="oras" disabled>
+                            <option value="">Alege un oraș</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label>Descriere profil:</label><br>
+                        <textarea name="profile_description" cols="40"
+                            rows="5">Aici puteți introduce o scurtă descriere a profilului dumneavoastră.</textarea>
+                    </p>
+                    <p>
+                        <label>Cod de admin (generat automat):</label>
+                        <input type="text" name="admin" value="ADM-99X" readonly>
+                    </p>
+
+                    <input type="checkbox" name="terms" value="yes" required>
+                    <p style="display: inline; margin-left: 5px;">Conștientizare termeni și condiții.</p>
+
+                    <p>
+                        <input type="submit" value="Înregistrare">
+                        <input type="reset" value="Resetare date">
+                    </p>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+</body>
+
+</html>

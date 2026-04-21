@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BestMarket - Acasă</title>
+    <link rel="stylesheet" href="CSS/home-page-styles.css">
+    <link rel="stylesheet" href="CSS/general-page-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="JS/banners.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <input type="checkbox" id="menu-toggle" class="hidden-checkbox">
+
+        <label for="menu-toggle" class="header-menu-btn" title="Deschide Meniul">
+            <i class="fas fa-bars"></i>
+            Produse
+        </label>
+
+        <nav class="dropdown-menu">
+            <ul>
+                <li>
+                    <input type="checkbox" id="cat-electronice-toggle" class="hidden-checkbox">
+                    <label for="cat-electronice-toggle" class="menu-item">
+                        <i class="fas fa-laptop item-icon"></i> Electronice <i class="fas fa-chevron-down arrow"></i>
+                    </label>
+                    <ul class="submenu">
+                        <li><a href="Html_5/item.html" class="submenu-option">Laptop-uri</a></li>
+                        <li><a href="#" class="submenu-option">Telefoane</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <input type="checkbox" id="cat-electro-toggle" class="hidden-checkbox">
+                    <label for="cat-electro-toggle" class="menu-item">
+                        <i class="fas fa-blender item-icon"></i> Electrocasnice <i
+                            class="fas fa-chevron-down arrow"></i>
+                    </label>
+                    <ul class="submenu">
+                        <li><a href="#" class="submenu-option">Mașini de spălat</a></li>
+                        <li><a href="#" class="submenu-option">Cuptoare</a></li>
+                    </ul>
+                </li>
+
+
+            </ul>
+        </nav>
+
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="resources/logo.png" class="logo" alt="BestMarket Logo">
+            </a>
+        </div>
+
+        <div class="header-actions">
+            <a href="Html_5/register.html" class="header-menu-btn"> <i class="fas fa-user-plus"></i> Înregistrare</a>
+            <a href="Html_5/login.html" class="header-menu-btn "> <i class="fas fa-sign-in-alt"></i> Autentificare</a>
+        </div>
+
+    </header>
+
+    <main>
+        <section>
+            <button class="slider-btn prev" aria-label="Slide Anterior"><i class="fas fa-chevron-left"></i></button>
+            <button class="slider-btn next" aria-label="Slide Următor"><i class="fas fa-chevron-right"></i></button>
+            <ol class="slider-lista">
+                <li class="slide active">
+                    <div class="slide-text">
+                        <h1>Cel mai bun site de anunțuri din România</h1>
+                        <p>Descoperă cea mai mare selecție de produse noi și second-hand la cele mai bune prețuri!</p>
+                    </div>
+                    <a href="index.html" class="slide-link">
+                        <figure class="slide-imagine">
+                            <img src="resources/BestMarket.png" alt="BestMarket banner" class="banner">
+                            <figcaption>Figura 1: Logo BestMarket.</figcaption>
+                        </figure>
+                    </a>
+                </li>
+
+                <li class="slide">
+                    <div class="slide-text">
+                        <h1>Descoperă gama largă de Laptopuri</h1>
+                        <p>Descoperă cea mai mare selecție de laptopuri noi și second-hand împreună cu alte produse
+                            electronice, toate la cele mai bune prețuri!</p>
+                    </div>
+                    <a href="Html_5/item.html" class="slide-link">
+                        <figure class="slide-imagine">
+                            <img src="resources/LaptopBanner.png" alt="Laptop banner" class="banner">
+                            <figcaption>Figura 2: Banner Laptop.</figcaption>
+                        </figure>
+                    </a>
+                </li>
+
+                <li class="slide">
+                    <div class="slide-text">
+                        <h1>Postează propriul anunț</h1>
+                        <p>Publică ușor anunțuri pentru produse noi sau second-hand, și găsește tot ce ai nevoie!</p>
+                    </div>
+                    <a href="Html_5/register.html" class="slide-link">
+                        <figure class="slide-imagine">
+                            <img src="resources/AddBanner.png" alt="Add banner" class="banner">
+                            <figcaption>Figura 3: Banner Adaugă Anunț.</figcaption>
+                        </figure>
+                    </a>
+                </li>
+            </ol>
+
+            <article>
+                <div class="article-header-section">
+                    <h2 class="titlu-sectiune">
+                        Vezi cele mai populare anunțuri!
+                    </h2>
+
+                    <div class="promo-badge">
+                        <i class="fas fa-shipping-fast"></i>
+                        <span><strong>Transport gratuit</strong> oferit de BestMarket toată săptămâna!</span>
+                    </div>
+                </div>
+                <div class="product-grid">
+
+                    <a href="Html_5/item.html" class="product-card">
+                        <div class="card-image-wrapper">
+                            <img src="resources/Laptop1.jpg" alt="Laptop Pro" class="card-img">
+                        </div>
+                        <div class="card-details">
+                            <h3 class="card-title">Laptop Pro 15"</h3>
+                            <p class="card-price">4.000 RON</p>
+                            <p class="card-location"><i class="fas fa-map-marker-alt"></i> Cluj-Napoca</p>
+                        </div>
+                    </a>
+
+                    <div class="product-card">
+                        <div class="card-image-wrapper">
+                            <img src="resources/Smartphone1.jpg" alt="Telefon Smart" class="card-img">
+                        </div>
+                        <div class="card-details">
+                            <h3 class="card-title">Smartphone X</h3>
+                            <p class="card-price">2.500 RON</p>
+                            <p class="card-location"><i class="fas fa-map-marker-alt"></i> București</p>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="card-image-wrapper">
+                            <img src="resources/MasinaDeSpalat1.jpg" alt="Mașină de spălat" class="card-img">
+                        </div>
+                        <div class="card-details">
+                            <h3 class="card-title">Mașină de spălat</h3>
+                            <p class="card-price">1.200 RON</p>
+                            <p class="card-location"><i class="fas fa-map-marker-alt"></i> Timișoara</p>
+                        </div>
+                    </div>
+
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Despre BestMarket</h3>
+                <p>Cea mai bună platformă pentru a vinde și cumpăra produse electronice și electrocasnice din România. A
+                    fost înființată de către Buda Sebastian în anul 2026. La momentul de față avem un numar mediu de 0
+                    utilizatori activi in fiecare zi!
+                </p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p><i class="fas fa-envelope"></i> suport@bestmarket.ro</p>
+                <p><i class="fas fa-phone"></i> 0123 456 789</p>
+                <p><i class="fas fa-map-marker-alt"></i> Cluj-Napoca, RO</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 BestMarket.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

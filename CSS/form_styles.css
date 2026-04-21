@@ -1,0 +1,225 @@
+/* GLOBAL VARIABLES */
+:root {
+    --primary-color: #001c98;
+    --primary-comp-color: #3296e3;
+    --secondary-color: #efa72b;
+    --bg-color: #f3f3f3;
+    --bg-color-dark: #cdcdcd;
+    --text-color-dark: #333;
+    --text-color-light: #f3f3f3;
+    --footer-bg: #3a3a3a;
+    --text-font: sans-serif;
+}
+
+/* --------------------------------------------- HEADER --------------------------------------------- */
+
+header {
+    background: linear-gradient(200deg, var(--primary-color), var(--primary-comp-color));
+    color: var(--text-color-light);
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 8px 18px;
+    border: 2px solid rgba(255, 255, 255, 0.6); 
+    border-radius: 20px; 
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    background-color: var(--text-color-light);
+    color: var(--primary-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* --------------------------------------------- BODY --------------------------------------------- */
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: var(--bg-color);
+    font-family: var(--text-font);
+    color: var(--text-color-dark);
+}
+
+main section{
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    justify-content: center;
+    display: flex;
+    width: 100%;
+}
+
+fieldset {
+    background: var(--bg-color);
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    padding: 30px 40px;
+    width: 100%;
+    max-width: 350px;
+}
+
+legend {
+    display: none;
+}
+
+h2 {
+    text-align: center;
+    color: var(--primary-color);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--text-color-dark);
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 15px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--secondary-color);
+    color: var(--text-color-light);
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+input[type="submit"]:hover {
+    background-color: #d69524;
+    transform: translateY(-2px);
+}
+
+
+/* --------------------------------------------- REGISTER TAGS ---------------------------------------------*/
+
+input[type="number"],
+input[list],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-family: inherit;
+    transition: border-color 0.3s;
+}
+
+input[type="number"]:focus,
+input[list]:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+input[readonly] {
+    background-color: #f3f3f3;
+    color: #888;
+    cursor: not-allowed;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 8px;
+    transform: scale(1.2);
+    accent-color: var(--primary-color);
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+input[type="reset"] {
+    width: 100%;
+    padding: 12px;
+    background-color: transparent;
+    color: #666;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s;
+}
+
+input[type="reset"]:hover {
+    background-color: #f9f9f9;
+    border-color: #999;
+    color: #333;
+}
+
+.validation-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    gap: 10px;
+}
+
+.dot{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: lightgray; 
+    transition: background-color 0.3s ease;
+}
+
+.dot.valid {
+    background-color: green;
+}
+
+.dot.invalid {
+    background-color: red;
+}
