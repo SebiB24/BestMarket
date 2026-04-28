@@ -36,10 +36,6 @@
     transition: transform 0.3s ease;
 }
 
-.cart-card:hover {
-    transform: translateX(5px);
-}
-
 .cart-img-wrapper {
     width: 160px;
     min-width: 160px;
@@ -239,16 +235,28 @@
     opacity: 0.9;
 }
 
-/* --- CANVAS CONFETTI --- */
-#confetti-canvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    pointer-events: none;
-    z-index: 9999;
+.jquery-gift {
     display: none;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    text-align: center;
+    color: #e74c3c;
+}
+
+.jquery-gift h2 {
+    color: white;
+    background: #28a745;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+    display: none;
+}
+
+.jquery-gift i{
+    font-size: 100px;
 }
 
 /* Responsivitate pentru ecrane mici */
