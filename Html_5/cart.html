@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BestMarket - Coș de Cumpărături</title>
+
+    <link rel="stylesheet" href="../CSS/general-page-styles.css">
+    <link rel="stylesheet" href="../CSS/cart-styles.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="../JS/jquery.js"></script>
+    <script src="../JS/cart-logic.js" defer></script>
+</head>
+
+<body>
+
+    <canvas id="confetti-canvas"></canvas>
+    <header>
+        <input type="checkbox" id="menu-toggle" class="hidden-checkbox">
+
+        <label for="menu-toggle" class="header-menu-btn" title="Deschide Meniul">
+            <i class="fas fa-bars"></i>
+            Produse
+        </label>
+
+        <nav class="dropdown-menu">
+            <ul>
+                <li>
+                    <input type="checkbox" id="cat-electronice-toggle" class="hidden-checkbox">
+                    <label for="cat-electronice-toggle" class="menu-item">
+                        <i class="fas fa-laptop item-icon"></i> Electronice <i class="fas fa-chevron-down arrow"></i>
+                    </label>
+                    <ul class="submenu">
+                        <li><a href="../Html_5/item.html" class="submenu-option">Laptop-uri</a></li>
+                        <li><a href="#" class="submenu-option">Telefoane</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <input type="checkbox" id="cat-electro-toggle" class="hidden-checkbox">
+                    <label for="cat-electro-toggle" class="menu-item">
+                        <i class="fas fa-blender item-icon"></i> Electrocasnice <i
+                            class="fas fa-chevron-down arrow"></i>
+                    </label>
+                    <ul class="submenu">
+                        <li><a href="#" class="submenu-option">Mașini de spălat</a></li>
+                        <li><a href="#" class="submenu-option">Cuptoare</a></li>
+                    </ul>
+                </li>
+
+
+            </ul>
+        </nav>
+
+        <div class="logo-container">
+            <a href="../index.html">
+                <img src="../resources/logo.png" class="logo" alt="BestMarket Logo">
+            </a>
+        </div>
+
+        <div class="header-actions">
+            <a href="cart.html" class="header-menu-btn "><i class="fa-solid fa-cart-arrow-down"></i></a>
+            <a href="register.html" class="header-menu-btn"> <i class="fas fa-user-plus"></i> Înregistrare</a>
+            <a href="login.html" class="header-menu-btn "> <i class="fas fa-sign-in-alt"></i> Autentificare</a>
+        </div>
+
+    </header>
+    <main>
+        <h1 class="cart-title-main">Coșul tău de cumpărături</h1>
+
+        <div class="cart-container">
+            <div class="cart-items" id="cart-items-list">
+
+                <div class="cart-card" data-price="4000">
+                    <div class="cart-img-wrapper">
+                        <img src="../resources/Laptop1.jpg" alt="Laptop" class="cart-img">
+                    </div>
+                    <div class="cart-details">
+                        <div class="cart-info-text">
+                            <h3 class="cart-title">Laptop Pro 15"</h3>
+                            <p class="cart-location"><i class="fas fa-map-marker-alt"></i> Cluj-Napoca</p>
+                        </div>
+                        <p class="cart-price">4.000 RON</p>
+                        <button class="cart-remove-item" title="Elimină"><i class="fas fa-trash"></i></button>
+                    </div>
+                </div>
+
+                <div class="cart-card" data-price="2500">
+                    <div class="cart-img-wrapper">
+                        <img src="../resources/Smartphone1.jpg" alt="Telefon" class="cart-img">
+                    </div>
+                    <div class="cart-details">
+                        <div class="cart-info-text">
+                            <h3 class="cart-title">Smartphone X</h3>
+                            <p class="cart-location"><i class="fas fa-map-marker-alt"></i> București</p>
+                        </div>
+                        <p class="cart-price">2.500 RON</p>
+                        <button class="cart-remove-item" title="Elimină"><i class="fas fa-trash"></i></button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="cart-summary">
+
+                <div class="cart-gauge-wrapper">
+                    <svg viewBox="0 0 200 120" class="cart-gauge-svg">
+                        <path d="M20,100 A80,80 0 0,1 180,100" fill="none" stroke="#eee" stroke-width="12" />
+                        <path id="gauge-progress" d="M20,100 A80,80 0 0,1 180,100" fill="none" stroke="#ff6b6b"
+                            stroke-width="12" />
+                        <line id="gauge-needle" x1="100" y1="100" x2="40" y2="100" stroke="#333" stroke-width="3"
+                            stroke-linecap="round" />
+                        <circle cx="100" cy="100" r="5" fill="#333" />
+                    </svg>
+                    <div id="shipping-info">Calculare transport...</div>
+                </div>
+
+                <div class="cart-price-box">
+                    <h3>Sumar Comandă</h3>
+                    <div class="cart-old-price" id="original-total"></div>
+                    <div class="cart-total-price" id="final-total">0 RON</div>
+                </div>
+
+                <div class="cart-coupon-section">
+                    <label>Cod Promoțional:</label>
+                    <div class="cart-coupon-input-group">
+                        <input type="text" id="coupon-code" placeholder="Cod: BESTMARKET2026">
+                        <button class="cart-btn-apply" id="apply-coupon">Aplică</button>
+                    </div>
+                    <p id="coupon-msg"></p>
+                </div>
+
+                <button class="cart-checkout-btn">Finalizează Comanda</button>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>

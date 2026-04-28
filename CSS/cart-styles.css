@@ -1,0 +1,282 @@
+/* --- STRUCTURĂ GENERALĂ COȘ --- */
+.cart-title-main {
+    text-align: center;
+    margin: 40px 0;
+    color: var(--primary-color, #003366);
+    font-size: 32px;
+}
+
+.cart-container {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    /* Lățime fixă pt sumar */
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto 50px auto;
+    padding: 0 20px;
+    align-items: start;
+    /* Să nu se întindă sumarul pe toată înălțimea */
+}
+
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* --- CARDURILE DE COȘ (ORIZONTALE) --- */
+.cart-card {
+    display: flex;
+    flex-direction: row;
+    height: 140px;
+    background-color: var(--bg-color-light, #fff);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.cart-card:hover {
+    transform: translateX(5px);
+}
+
+.cart-img-wrapper {
+    width: 160px;
+    min-width: 160px;
+    height: 100%;
+    border-right: 1px solid #eee;
+}
+
+.cart-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.cart-details {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+}
+
+.cart-info-text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.cart-title {
+    margin: 0;
+    font-size: 20px;
+    color: var(--text-color-dark, #333);
+}
+
+.cart-location {
+    margin: 0;
+    font-size: 14px;
+    color: #777;
+}
+
+.cart-price {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--secondary-color, #ff6b6b);
+    margin: 0;
+}
+
+.cart-remove-item {
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.3s ease;
+}
+
+.cart-remove-item:hover {
+    background: #e60000;
+}
+
+/* --- PANOU SUMAR (SIDEBAR) --- */
+.cart-summary {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 20px;
+}
+
+/* Indicator SVG */
+.cart-gauge-wrapper {
+    text-align: center;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.cart-gauge-svg {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+#gauge-progress {
+    stroke-dasharray: 251;
+    stroke-dashoffset: 251;
+    transition: stroke-dashoffset 0.8s ease;
+}
+
+#gauge-needle {
+    transform-origin: 100px 100px;
+    transition: transform 0.8s ease;
+}
+
+#shipping-info {
+    display: inline-block;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    color: white;
+    margin-top: -15px;
+    position: relative;
+    z-index: 2;
+    background: #ffa500;
+}
+
+/* Prețuri și Formular Cupon */
+.cart-price-box {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+.cart-price-box h3 {
+    margin-top: 0;
+}
+
+.cart-total-price {
+    font-size: 30px;
+    font-weight: 900;
+    color: #28a745;
+}
+
+.cart-old-price {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: none;
+}
+
+.cart-coupon-section label {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.cart-coupon-input-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.cart-coupon-input-group input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    outline: none;
+}
+
+.cart-btn-apply {
+    background: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.cart-btn-apply:hover {
+    background: #000;
+}
+
+#coupon-msg {
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 8px;
+    min-height: 15px;
+}
+
+.cart-checkout-btn {
+    width: 100%;
+    background: var(--primary-color, #003366);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.cart-checkout-btn:hover {
+    opacity: 0.9;
+}
+
+/* --- CANVAS CONFETTI --- */
+#confetti-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 9999;
+    display: none;
+}
+
+/* Responsivitate pentru ecrane mici */
+@media screen and (max-width: 900px) {
+    .cart-container {
+        grid-template-columns: 1fr;
+    }
+
+    .cart-card {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .cart-img-wrapper {
+        width: 100%;
+        height: 200px;
+        border-right: none;
+        border-bottom: 1px solid #eee;
+    }
+
+    .cart-details {
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .cart-remove-item {
+        width: 100%;
+    }
+}
