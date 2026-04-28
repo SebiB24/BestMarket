@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="../JS/table.js" defer></script>
     <script src="../JS/gallery.js" defer></script>
+
+    <script src="../JS/jquery.js" defer></script>
+    <script src="../JS/slider_jquery.js" defer></script>
 </head>
 
 <body>
@@ -234,6 +237,36 @@
                 </table>
             </div>
         </section>
+
+        <!-- Image slider -->
+        <section class="slider-section">
+            <div class="controls">
+                <label for="imgCount">Număr imagini vizibile:</label>
+                <input type="number" id="imgCount" min="1" max="5" value="1">
+
+                <label for="timerCount">Secunde tranziție:</label>
+                <input type="number" id="timerCount" min="1" value="3">
+            </div>
+
+            <div id="slider-wrapper" class="slider-wrapper">
+                <div class="arrow arrow-up"><i class="fa-solid fa-chevron-up"></i></div>
+
+                <div id="slider-container" class="slider-container">
+                </div>
+
+                <div class="arrow arrow-down"><i class="fa-solid fa-chevron-down"></i></div>
+            </div>
+        </section>
+
+        <div id="custom-popup" class="popup-overlay">
+            <div class="popup-content">
+                <span class="popup-close">&times;</span>
+                <div id="popup-media-container">
+                </div>
+                <div class="popup-caption">
+                </div>
+            </div>
+        </div>
 
     </main>
 
