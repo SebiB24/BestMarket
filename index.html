@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="CSS/general-page-styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="JS/banners.js" defer></script>
+    <script src="JS/jquery.js" defer></script>
+    <script src="JS/cart-badge-login.js" defer></script>
 </head>
 
 <body>
@@ -58,7 +60,11 @@
         </div>
 
         <div class="header-actions">
-            <a href="Html_5/cart.html" class="header-menu-btn "><i class="fa-solid fa-cart-arrow-down"></i></a>
+            <a href="Html_5/cart.html" class="header-menu-btn ">
+                <i class="fa-solid fa-cart-arrow-down">
+                    <span id="cart-badge" class="cart-badge">0</span>
+                </i>
+            </a>
             <a href="Html_5/register.html" class="header-menu-btn"> <i class="fas fa-user-plus"></i> Înregistrare</a>
             <a href="Html_5/login.html" class="header-menu-btn "> <i class="fas fa-sign-in-alt"></i> Autentificare</a>
         </div>

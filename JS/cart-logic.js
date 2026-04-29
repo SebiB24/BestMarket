@@ -21,6 +21,10 @@ $(document).ready(function () {
         }
 
         updateIndicator(total_final);
+        
+        localStorage.setItem('cartItemCount', $('.cart-card').length)
+
+        updateCartBadge();
     }
 
 

@@ -13,6 +13,7 @@
 
     <script src="../JS/jquery.js" defer></script>
     <script src="../JS/slider_jquery.js" defer></script>
+    <script src="../JS/cart-badge-login.js" defer></script>
 </head>
 
 <body>
@@ -61,7 +62,11 @@
         </div>
 
         <div class="header-actions">
-            <a href="cart.html" class="header-menu-btn "><i class="fa-solid fa-cart-arrow-down"></i></a>
+            <a href="cart.html" class="header-menu-btn ">
+                <i class="fa-solid fa-cart-arrow-down">
+                    <span id="cart-badge" class="cart-badge">0</span>
+                </i>
+            </a>
             <a href="register.html" class="header-menu-btn"> <i class="fas fa-user-plus"></i> Înregistrare</a>
             <a href="login.html" class="header-menu-btn "> <i class="fas fa-sign-in-alt"></i> Autentificare</a>
         </div>

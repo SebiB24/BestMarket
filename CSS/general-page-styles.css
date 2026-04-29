@@ -74,6 +74,25 @@ a {
     text-decoration: none;
 }
 
+.fa-solid{
+    position: relative;
+}
+
+.cart-badge {
+    position: absolute;
+    top: -7px;
+    right: -15px;
+    background-color: #ff4d4d;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 100%;
+    padding: 2px 2px;
+    min-width: 15px;
+    text-align: center;
+    display: none;
+}
+
 /* --------------------------------------------- MENU */
 
 .hidden-checkbox {

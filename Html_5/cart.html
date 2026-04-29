@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="../JS/jquery.js"></script>
     <script src="../JS/cart-logic.js" defer></script>
+    <script src="../JS/cart-badge-login.js"></script>
 </head>
 
 <body>
@@ -60,7 +61,12 @@
         </div>
 
         <div class="header-actions">
-            <a href="cart.html" class="header-menu-btn "><i class="fa-solid fa-cart-arrow-down"></i></a>
+            <a href="cart.html" class="header-menu-btn ">
+                <i class="fa-solid fa-cart-arrow-down">
+                    <span id="cart-badge" class="cart-badge">0</span>
+                </i>
+                
+            </a>
             <a href="register.html" class="header-menu-btn"> <i class="fas fa-user-plus"></i> Înregistrare</a>
             <a href="login.html" class="header-menu-btn "> <i class="fas fa-sign-in-alt"></i> Autentificare</a>
         </div>
@@ -111,12 +117,27 @@
 
                 <div class="cart-gauge-wrapper">
                     <svg viewBox="0 0 200 120" class="cart-gauge-svg">
-                        <path d="M20,100 A80,80 0 0,1 180,100" fill="none" stroke="#eee" stroke-width="12" />
-                        <path id="gauge-progress" d="M20,100 A80,80 0 0,1 180,100" fill="none" stroke="#ff6b6b"
+                        <path d="M20,100 A80,80 0 0,1 180,100" 
+                            fill="none"     
+                            stroke="#eee" 
                             stroke-width="12" />
-                        <line id="gauge-needle" x1="100" y1="100" x2="40" y2="100" stroke="#333" stroke-width="3"
+                        <path id="gauge-progress" 
+                            d="M20,100 A80,80 0 0,1 180,100"    
+                            fill="none" 
+                            stroke="#ff6b6b"
+                            stroke-width="12" />
+                        <line id="gauge-needle" 
+                            x1="100" 
+                            y1="100" 
+                            x2="40" 
+                            y2="100" 
+                            stroke="#333" 
+                            stroke-width="3"
                             stroke-linecap="round" />
-                        <circle cx="100" cy="100" r="5" fill="#333" />
+                        <circle cx="100" 
+                            cy="100" 
+                            r="5" 
+                            fill="#333" />
                     </svg>
                     <div id="shipping-info">Calculare transport...</div>
                 </div>
